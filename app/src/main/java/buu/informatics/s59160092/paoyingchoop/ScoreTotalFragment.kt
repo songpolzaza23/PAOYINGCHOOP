@@ -19,6 +19,7 @@ class ScoreTotalFragment : Fragment() {
     private lateinit var binding: FragmentScoreTotalBinding
     private lateinit var viewModel: ScoreTotalViewModel
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

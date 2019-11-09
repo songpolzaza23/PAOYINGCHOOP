@@ -30,7 +30,7 @@ class ScoreFragment : Fragment() {
 
         val args = ScoreFragmentArgs.fromBundle(arguments!!)
 
-        viewModelFactory = ScoreFragmentViewModelFactory(args.namePlayer1 , args.namePlayer2 , args.scorePlayer1 , args.scorePlayer2)
+        viewModelFactory = ScoreFragmentViewModelFactory(args.namePlayer1 , args.namePlayer2 , args.scorePlayer1 , args.scorePlayer2 )
         viewModel = ViewModelProviders.of(this ,viewModelFactory).get(ScoreFragmentViewModel::class.java)
         viewModel.name1.observe(this, Observer { newName1 ->
             binding.namePlayerScore1.text = newName1.toString()
@@ -57,6 +57,7 @@ class ScoreFragment : Fragment() {
 //        binding.scorePlayer2.setText(viewModel.point2.toString())
 
 //        sendDate()
+
         binding.homeBtn.setOnClickListener { view: View? -> view?.findNavController()?.navigate(ScoreFragmentDirections.actionScoreFragmentToTitle2()) }
         binding.totalScoreBtn.setOnClickListener { view: View? -> view?.findNavController()?.navigate(ScoreFragmentDirections.actionScoreFragmentToScoreTotalFragment("pop")) }
 

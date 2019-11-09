@@ -14,13 +14,14 @@ interface HistoryDatabaseDAO {
 
     @Update
     fun update(history: History)
-//
-//    @Query("SELECT * FROM history_score WHERE historyId = :key")
-//    fun get(key: Long) :History
-//
-//    @Query("SELECT * FROM history_score ORDER BY historyId DESC LIMIT 1")
-//    fun getToHistory(): History?
-//
-//    @Query("SELECT * FROM history_score ORDER BY historyId DESC")
-//    fun getAllHistory(): LiveData<List<History>>
+
+    @Query("SELECT * FROM history_score WHERE historyId = :key")
+    fun get(key: Long) :History
+
+    @Query("SELECT * FROM history_score ORDER BY historyId DESC LIMIT 1")
+    fun getToHistory(): History?
+
+    @Query("SELECT * FROM history_score ORDER BY historyId DESC")
+    fun getAllHistory(): LiveData<List<History>>
+
 }

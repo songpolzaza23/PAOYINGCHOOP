@@ -1,12 +1,17 @@
 package buu.informatics.s59160092.paoyingchoop
 
+import android.app.Application
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import buu.informatics.s59160092.paoyingchoop.database.HistoryDatabase
+import buu.informatics.s59160092.paoyingchoop.database.HistoryDatabaseDAO
 import kotlin.math.log
 
 class ScoreFragmentViewModel(n1 :String ,n2 :String ,p1 :Int ,p2 :Int) : ViewModel() {
+
+
 
     private val _name1 = MutableLiveData<String>()
     val name1:LiveData<String>

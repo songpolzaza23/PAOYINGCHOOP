@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "history_score")
 data class History(
     @PrimaryKey(autoGenerate = true)
-    var history: Long? = 0L,
+    var historyId: Long? = 0L,
 
     @ColumnInfo(name = "name_Player1")
     var namePlayer1: String,

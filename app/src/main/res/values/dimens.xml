@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="title_size">72sp</dimen>
-    <dimen name="size_btn">32sp</dimen>
+    <dimen name="title_size">32sp</dimen>
+    <dimen name="size_btn">16sp</dimen>
     <dimen name="size_images">200dp</dimen>
-    <dimen name="play_btn">32sp</dimen>
+    <dimen name="play_btn">16sp</dimen>
     <dimen name="image_select">300dp</dimen>
     <dimen name="select_size">125dp</dimen>
-    <dimen name="name_player_game_text">32sp</dimen>
-    <dimen name="text_size_32">32sp</dimen>
+    <dimen name="name_player_game_text">16sp</dimen>
+    <dimen name="text_size_32">16sp</dimen>
 </resources>
