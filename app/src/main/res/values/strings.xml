@@ -24,4 +24,8 @@
     <string name="faculty">FACULTY</string>
     <string name="major">MAJOR</string>
     <string name="computer_science">COMPUTER SCIENCE</string>
+    <string name="name">NAME</string>
+    <string name="s_999">999</string>
+    <string name="s_000" />
+    <string name="result">RESULT</string>
 </resources>
