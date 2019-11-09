@@ -2,6 +2,7 @@ package buu.informatics.s59160092.paoyingchoop
 
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import buu.informatics.s59160092.paoyingchoop.databinding.FragmentGameBinding
 import kotlinx.android.synthetic.main.fragment_game.view.*
+import kotlin.math.log
 
 /**
  * A simple [Fragment] subclass.
@@ -47,6 +49,9 @@ class GameFragment : Fragment() {
         binding.scorePlayer2Text.setText(" ${p2}")
 
         checkPlayer()
+
+        Log.i("ScoreGmae" , "${args.userPlayer1} score: ${p1}")
+        Log.i("ScoreGmae" , "${args.userPlayer2} score: ${p2}")
 
         return binding.root
     }
