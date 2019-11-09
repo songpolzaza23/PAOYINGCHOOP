@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/title2">
+
+    <fragment
+        android:id="@+id/title2"
+        android:name="buu.informatics.s59160092.paoyingchoop.Title"
+        android:label="PAOYINGCHOOP"
+        tools:layout="@layout/fragment_title">
+        <action
+            android:id="@+id/action_title2_to_select"
+            app:destination="@id/select"
+            app:popUpTo="@+id/select" />
+        <action
+            android:id="@+id/action_title2_to_scoreTotalFragment"
+            app:destination="@id/scoreTotalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/select"
+        android:name="buu.informatics.s59160092.paoyingchoop.select"
+        android:label="PAOYINGCHOOP"
+        tools:layout="@layout/fragment_select">
+        <action
+            android:id="@+id/action_select_to_playWithBotFragment"
+            app:destination="@id/playWithBotFragment"
+            app:popUpTo="@+id/playWithBotFragment" />
+        <action
+            android:id="@+id/action_select_to_playWithFriendsFragment"
+            app:destination="@id/playWithFriendsFragment"
+            app:popUpTo="@+id/playWithFriendsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playWithBotFragment"
+        android:name="buu.informatics.s59160092.paoyingchoop.PlayWithBotFragment"
+        android:label="PAOYINGCHOOP"
+        tools:layout="@layout/fragment_play_with_bot">
+        <action
+            android:id="@+id/action_playWithBotFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@+id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playWithFriendsFragment"
+        android:name="buu.informatics.s59160092.paoyingchoop.PlayWithFriendsFragment"
+        android:label="PAOYINGCHOOP"
+        tools:layout="@layout/fragment_play_with_friends">
+        <action
+            android:id="@+id/action_playWithFriendsFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@+id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="buu.informatics.s59160092.paoyingchoop.GameFragment"
+        android:label="PAOYINGCHOOP"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_gameFragment_to_resultGame"
+            app:destination="@id/resultGame"
+            app:popUpTo="@+id/resultGame" />
+        <argument
+            android:name="userPlayer1"
+            app:argType="string" />
+        <argument
+            android:name="userPlayer2"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_gameFragment_self"
+            app:destination="@id/gameFragment" />
+        <argument
+            android:name="userResult1"
+            app:argType="string" />
+        <argument
+            android:name="userResult2"
+            app:argType="string" />
+        <argument
+            android:name="num"
+            app:argType="integer" />
+        <argument
+            android:name="pointP1"
+            app:argType="integer" />
+        <argument
+            android:name="pointP2"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultGame"
+        android:name="buu.informatics.s59160092.paoyingchoop.ResultGame"
+        android:label="PAOYINGCHOOP"
+        tools:layout="@layout/fragment_result_game">
+        <action
+            android:id="@+id/action_resultGame_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+        <action
+            android:id="@+id/action_resultGame_to_gameFragment"
+            app:destination="@id/gameFragment" />
+        <argument
+            android:name="nmPlayer1"
+            app:argType="string" />
+        <argument
+            android:name="nmPlayer2"
+            app:argType="string" />
+        <argument
+            android:name="rePlayer1"
+            app:argType="string" />
+        <argument
+            android:name="rePlayer2"
+            app:argType="string" />
+        <argument
+            android:name="pointPY1"
+            app:argType="integer" />
+        <argument android:name="pointPY2"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="buu.informatics.s59160092.paoyingchoop.ScoreFragment"
+        android:label="PAOYINGCHOOP"
+        tools:layout="@layout/fragment_score">
+        <action
+            android:id="@+id/action_scoreFragment_to_title2"
+            app:destination="@id/title2" />
+        <action
+            android:id="@+id/action_scoreFragment_to_scoreTotalFragment"
+            app:destination="@id/scoreTotalFragment" />
+        <argument
+            android:name="namePlayer1"
+            app:argType="string" />
+        <argument
+            android:name="namePlayer2"
+            app:argType="string" />
+        <argument
+            android:name="scorePlayer1"
+            app:argType="integer" />
+        <argument android:name="scorePlayer2"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreTotalFragment"
+        android:name="buu.informatics.s59160092.paoyingchoop.ScoreTotalFragment"
+        android:label="PAOYINGCHOOP"
+        tools:layout="@layout/fragment_score_total">
+        <action
+            android:id="@+id/action_scoreTotalFragment_to_title2"
+            app:destination="@id/title2" />
+        <argument
+            android:name="data"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/about"
+        android:name="buu.informatics.s59160092.paoyingchoop.about"
+        android:label="PAOYINGCHOOP"
+        tools:layout="@layout/fragment_about" />
+</navigation>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">PAOYINGCHOOP</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="newplay_button">NEW PLAY</string>
+    <string name="title_text">PAOYINGCHOOP</string>
+    <string name="total_text">TOTAL SCORE</string>
+    <string name="play_with_bot_btn">PLAY WITH BOT</string>
+    <string name="play_with_friend_btn">PLAY WITH FRIENDS</string>
+    <string name="username">USERNAME</string>
+    <string name="play_btn">PLAY</string>
+    <string name="player1_hint">PLAYER 1</string>
+    <string name="player2_hint">PLAYER 2</string>
+    <string name="score_text">SCORE :</string>
+    <string name="play_again_button">PLAY AGAIN</string>
+    <string name="home_button">HOME</string>
+    <string name="end_button">END</string>
+    <string name="about_text">ABOUT</string>
+    <string name="share_success_text">I mastered %1$d correct !</string>
+    <string name="share">Share</string>
+    <string name="name_deverloper">SONGPOL SURIWONG</string>
+    <string name="informatics">INFORMATICS</string>
+    <string name="faculty">FACULTY</string>
+    <string name="major">MAJOR</string>
+    <string name="computer_science">COMPUTER SCIENCE</string>
+</resources>
