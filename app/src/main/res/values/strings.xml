@@ -30,4 +30,6 @@
     <string name="result">RESULT</string>
     <string name="email">Email</string>
     <string name="mail_me">59160092@go.buu.ac.th</string>
+    <string name="dev">DEVELOPER BY</string>
+    <string name="total_score">TOTAL SCORE :</string>
 </resources>

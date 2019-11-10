@@ -19,7 +19,7 @@ class Title : Fragment() {
         binding = DataBindingUtil.inflate(inflater , R.layout.fragment_title , container , false)
 
         binding?.newplayBtn.setOnClickListener { view: View? -> view?.findNavController()?.navigate(R.id.action_title2_to_select) }
-        binding.totalBtn.setOnClickListener { view: View? -> view?.findNavController()?.navigate(R.id.action_title2_to_scoreTotalFragment) }
+        binding.totalBtn.setOnClickListener { view: View? -> view?.findNavController()?.navigate(TitleDirections.actionTitle2ToScoreTotalFragment("")) }
         setHasOptionsMenu(true)
 
         return binding.root
