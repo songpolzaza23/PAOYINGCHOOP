@@ -8,4 +8,5 @@
     <dimen name="select_size">125dp</dimen>
     <dimen name="name_player_game_text">16sp</dimen>
     <dimen name="text_size_32">16sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
 </resources>

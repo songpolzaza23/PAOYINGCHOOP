@@ -16,8 +16,8 @@ data class History(
     var namePlayer2: String,
 
     @ColumnInfo(name = "score_Player1")
-    var scorePlayer1: Int,
+    var scorePlayer1: String,
 
     @ColumnInfo(name = "score_Player")
-    var scorePlayer2: Int
+    var scorePlayer2: String
 )

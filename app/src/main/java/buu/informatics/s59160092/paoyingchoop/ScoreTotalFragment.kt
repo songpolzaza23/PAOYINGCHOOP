@@ -29,7 +29,7 @@ class ScoreTotalFragment : Fragment() {
 
         val args = ScoreTotalFragmentArgs.fromBundle(arguments!!)
 
-        viewModel = ViewModelProviders.of(this).get(ScoreTotalViewModel::class.java)
+        //viewModel = ViewModelProviders.of(this).get(ScoreTotalViewModel::class.java)
 
         binding.homeBtn.setOnClickListener { view: View? -> view?.findNavController()?.navigate(ScoreTotalFragmentDirections.actionScoreTotalFragmentToTitle2()) }
 

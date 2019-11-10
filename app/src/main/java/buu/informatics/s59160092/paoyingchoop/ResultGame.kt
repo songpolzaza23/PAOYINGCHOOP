@@ -303,6 +303,5 @@ class ResultGame : Fragment() {
             binding.resultGame.setText(" ${args.nmPlayer1} WIN!! ")
             pointPlayer1++
         }
-
     }
 }

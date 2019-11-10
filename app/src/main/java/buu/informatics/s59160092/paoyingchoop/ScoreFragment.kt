@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
+import buu.informatics.s59160092.paoyingchoop.database.HistoryDatabase
 import buu.informatics.s59160092.paoyingchoop.databinding.FragmentScoreBinding
 
 /**
@@ -21,6 +22,8 @@ class ScoreFragment : Fragment() {
     private lateinit var viewModel: ScoreFragmentViewModel
     private lateinit var viewModelFactory: ScoreFragmentViewModelFactory
 
+    private var wd: WaitInsertData = WaitInsertData()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,8 +32,23 @@ class ScoreFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater , R.layout.fragment_score , container , false)
 
         val args = ScoreFragmentArgs.fromBundle(arguments!!)
+        val application = requireNotNull(this.activity).application
+        val dataSource = HistoryDatabase.getInstance(application).historyDatabaseDAO
 
-        viewModelFactory = ScoreFragmentViewModelFactory(args.namePlayer1 , args.namePlayer2 , args.scorePlayer1 , args.scorePlayer2 )
+        viewModelFactory = ScoreFragmentViewModelFactory(args.namePlayer1 , args.namePlayer2 , args.scorePlayer1.toString() , args.scorePlayer2.toString() , dataSource , application)
+        val ScoreFragmentViewModel =ViewModelProviders.of(
+            this, viewModelFactory).get(ScoreFragmentViewModel::class.java)
+        binding.setLifecycleOwner(this)
+        binding.scoreFragmentViewModel = ScoreFragmentViewModel
+
+        wd.namePlayer1 = args.namePlayer1
+        wd.namePlayer2 = args.namePlayer2
+        wd.score1 = args.scorePlayer1.toString()
+        wd.score2 = args.scorePlayer2.toString()
+
+        ScoreFragmentViewModel!!.InsertEb(wd)
+
+
         viewModel = ViewModelProviders.of(this ,viewModelFactory).get(ScoreFragmentViewModel::class.java)
         viewModel.name1.observe(this, Observer { newName1 ->
             binding.namePlayerScore1.text = newName1.toString()
@@ -44,6 +62,8 @@ class ScoreFragment : Fragment() {
         viewModel.point2.observe(this, Observer { newPoint2 ->
             binding.scorePlayer2.text = newPoint2.toString()
         })
+
+
 
 //        viewModel.name1 = args.namePlayer1
 //        viewModel.name2 = args.namePlayer2

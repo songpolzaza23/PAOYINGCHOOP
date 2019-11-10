@@ -21,7 +21,7 @@ abstract class HistoryDatabase : RoomDatabase(){
 
                 if (instance == null) {
                     instance = Room.databaseBuilder(
-                        context.applicationContext, HistoryDatabase::class.java,"history_databse"
+                        context.applicationContext, HistoryDatabase::class.java,"history_database"
                     )
                         .fallbackToDestructiveMigration()
                         .build()
